@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<form action="">
+    <input type="text" id="btn"/>
+    <input type="text" id="result"/></br>
+    <input type="reset" value="重置" style="margin-top: 20px;width: 100px; height: 100px;cursor: pointer"/>
+</form>
+
+<script src="/MBofficialSite/library/jquery/jquery-1.11.1.js"></script>
+<script type="text/javascript">
+    function px(num){
+        return num*16/320;
+    };
+    $("#btn").blur(function(){
+        var temp=$(this).val();
+        var truenum = px(temp);
+        $("#result").val(truenum);
+    })
+</script>
+</body>
+</html>

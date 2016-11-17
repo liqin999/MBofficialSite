@@ -16,28 +16,23 @@
     <link rel="stylesheet" type="text/css" href="/dist/css/plugins/animate.css">
     <link rel="stylesheet" type="text/css" href="/dist/css/pages/index.css">
     <title>易企卖</title>
+    <script>
+        document.getElementsByTagName("html")[0].style.fontSize=document.documentElement.clientWidth/2+"px";
+    </script>
     <style type="text/css">
         /*头部样式, 暂时寄存  样式层级不要超过3层*/
         /*主流分辨率:240*320(一般不考虑)、320*480、480*800(多)、640*960(多) 480*854 1280*720 800*1280 1080*1920*/
-        @media screen and (min-width:640px){
-            html,body{font-size: 16px;}
-        }
-        @media screen and (min-width: 480px) and (max-width: 639px){
-            html,body{ font-size: 32px;}
-        }
-        @media screen and (min-width: 480px) and (max-width: 479px){
-            html,body{ font-size: 32px;}
-        }
 
         html,body{width: 100%;height:100%;background: #f0f0f0 }
         .container-fluid{font-family:Microsoft YaHei,"微软雅黑"}
         #head{
             width:100%;
             /*rem=实际上的像素除以根的14字体大小*/
-            height: 5.5rem;
-            line-height: 5.5rem;
+            /*元素的实际大小除以320 通过比例计算得出公式*/
+            height:0.25rem;
+            line-height: 0.25rem;
             text-align: center;
-            font-size: 0.5625rem;
+            font-size: 0.05rem;
             position: fixed;
             top:0;
             left:0;
@@ -48,49 +43,49 @@
         .fl{float: left}
         .fr{float: right}
         .clear:after{ clear: both; display: block; content:"";}
-        #head .leftlogo{float: left;width: 6.875rem;margin-left:2.185rem;cursor: pointer;display: inline-block;margin-top:1.0625rem }
-        #head .rightBtn{float: right;width: 1.875rem;margin-right: 1.875rem;cursor: pointer;display: inline-block;margin-top: 1.75rem}
-        #main{width: 100%;position: absolute;top: 5.5rem;left: 0;background: #fff;bottom: 6.125rem;overflow:auto }
-        #main .floor1{width: 100%;height: 18.625rem;background:url(/dist/img/index/index3.png) no-repeat; background-size:contain; box-sizing:border-box;}
+        #head .leftlogo{float: left;width: 0.34375rem;margin-left:0.10925rem;cursor: pointer;display: inline-block;margin-top:0.053125rem }
+        #head .rightBtn{float: right;width: 0.09375rem;margin-right: 0.09375rem;cursor: pointer;display: inline-block;margin-top: 0.0875rem}
+        #main{width: 100%;position: absolute;top: 0.275rem;left: 0;background: #fff;bottom: 0.30625rem;overflow:auto }
+        #main .floor1{width: 100%;height: 0.93125rem;background:url(/dist/img/index/index3.png) no-repeat; background-size:contain; box-sizing:border-box;}
         #main .floor2{background: #fff;}
-        #main .adv_title{text-align: center;font-size: 2.125rem;color: #7ab55c;margin-top: 3.75rem;margin-bottom: 3.75rem}
+        #main .adv_title{text-align: center;font-size: 0.10625rem;color: #7ab55c;margin-top: 0.1875rem;margin-bottom: 0.1875rem}
         #main .floor2 .adv_list{margin: 0 auto}
-        .floor2 .adv_list li{float: left;width:50% ;height: 16.875rem;text-align: center}
+        .floor2 .adv_list li{float: left;width:50% ;height: 0.84375rem;text-align: center}
         .adv_list .txt1{font-size:1.5rem }
         .adv_list .txt2{font-size:1.25rem }
-        #main .floor3{background: #f5f6fa;height:59.875rem;border: 1px solid transparent; }
-        .floor3 .effict{width: 36.25rem;height: 10.25rem;background: #fff;padding: 1.75rem;border-radius: 10px;margin: 0 auto;
+        #main .floor3{background: #f5f6fa;height:2.99375rem;border: 1px solid transparent; }
+        .floor3 .effict{width: 1.8125rem;height: 0.5125rem;background: #fff;padding: 0.0875rem;border-radius: 10px;margin: 0 auto;
             -webkit-box-shadow: 0px 4px 6px #ccc;
             -moz-box-shadow: 0px 4px 6px #ccc;
             box-shadow: 0px 4px 6px #ccc;
         }
         .floor3 .effict .txt1{font-size: 1.75rem;color: #3d3d3d}
         .floor3 .effict .txt2{font-size: 1.5rem;color:#828282 }
-        .floor3 .effict .eff-img{margin-right: 0.9375rem;margin-top: 0.5rem}
+        .floor3 .effict .eff-img{margin-right: 0.046875rem;margin-top: 0.025rem}
         .floor3 .arrow{text-align: center}
-        .floor3 .arrow .arrow_img{margin-top:2.125rem;margin-bottom: 2.25rem; }
-        .floor4{width: 100%;height:11.125rem;border: 1px solid transparent }
+        .floor3 .arrow .arrow_img{margin-top:0.10625rem;margin-bottom: 0.1125rem; }
+        .floor4{width: 100%;height:0.55625rem;border: 1px solid transparent }
         .floor4 .txt1{font-size:1.875rem ;color: #646464;}
-        .floor4 .regCon{text-align: center;margin-top: 3.75rem}
-        .floor4 .regBtn{display: inline-block;font-size: 1.75rem;color: #fff;background:#7ab55c;width: 11.25rem;height: 3.375rem;line-height: 3.375rem;text-align: center;margin-left: 1.25rem;border-radius: 3px }
-        .floor5{background-color: #252f37;color: #d9d9d9;width: 100%;text-align: center;font-size: 0.75rem;height: 6.125rem;overflow: hidden}
-        .floor5 .bot1{margin-top:1.625rem }
+        .floor4 .regCon{text-align: center;margin-top: 0.1875rem}
+        .floor4 .regBtn{display: inline-block;font-size: 1.75rem;color: #fff;background:#7ab55c;width: 0.5625rem;height: 0.16875rem;line-height: 0.16875rem;text-align: center;margin-left: 0.0625rem;border-radius: 3px }
+        .floor5{background-color: #252f37;color: #d9d9d9;width: 100%;text-align: center;font-size: 0.75rem;height: 0.30625rem;overflow: hidden}
+        .floor5 .bot1{margin-top:0.08125rem }
         .floor5 .bot2{}
-        #foot{height: 6.125rem;width: 100%;position: fixed;bottom: 1px;left: 0px;background-color: #252f37;color: #fff;font-size: 1.5rem}
+        #foot{height: 0.30625rem;width: 100%;position: fixed;bottom: 1px;left: 0px;background-color: #252f37;color: #fff;font-size: 1.5rem}
         #foot>ul{margin: 0 auto;width:100%}
         #foot>ul>li{
-            margin-top:0.625rem ;
+            margin-top:0.03125rem ;
             float: left;
-            width: 10rem;
-            height: 5.5rem;
+            width: 0.5rem;
+            height: 0.275rem;
             background-size:cover; box-sizing:border-box;
             font-size: 1.5rem;
             color: #fff;
             text-align: center;
-            padding-top: 3rem;
+            padding-top: 0.15rem;
         }
         #foot>ul>li:nth-of-type(1){
-            margin-left: 2.875rem;
+            margin-left: 0.14375rem;
            background:url("/dist/img/index/foot1.png") no-repeat center top;;
         }
         #foot>ul>li:nth-of-type(2){
