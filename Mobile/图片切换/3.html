@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<meta name="viewport" content="width=device-width,target-densitydpi=device-dpi,user-scalable=no">
+<script>
+document.getElementsByTagName("html")[0].style.fontSize=window.screen.width/10+"px";
+</script>
+<style>
+body{margin:0;font-size:0.4rem;background:#e1e1e1;}
+#picWrap{width:100%;overflow:hidden;}
+#picList{width:40rem;overflow:hidden;}
+#picList a{float:left;}
+#picList img{width:10rem;}
+#btns{margin:0;padding:0.15rem;height:0.2rem; text-align:center;}
+#btns span{ display:inline-block;width:0.2rem;height:0.2rem;margin:0 0.1rem; vertical-align:top;border:1px solid #000; box-sizing:border-box; border-radius:0.1rem;}
+#btns .active{ background:#f60;}
+</style>
+</head>
+<body>
+<section id="picWrap">
+	<nav id="picList">
+    	<a href="#1">
+        	<img src="img/1.jpg" />
+        </a>
+        <a href="#2">
+        	<img src="img/2.jpg" />
+        </a>
+        <a href="#3">
+        	<img src="img/3.jpg" />
+        </a>
+        <a href="#4">
+        	<img src="img/4.jpg" />
+        </a>
+    </nav>
+</section>
+<p id="btns">
+	<span class="active"></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</p>
+</body>
+</html>

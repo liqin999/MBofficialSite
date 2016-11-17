@@ -5,28 +5,214 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="renderer" content="webkit">
-    <meta http-equiv="Cache-Control" content="no-siteapp" />
     <meta name="keywords" content="your keywords">
     <meta name="description" content="your description">
     <meta name="viewport" content ="initial-scale=1.0,maximum-scale=1,user-scalable=no">
-    <!--适配iPhone 6 和 iPhone 6plus-->
-    <meta name="viewport" content="width=375">
-    <meta name="viewport" content="width=414">
+
     <link rel="stylesheet" type="text/css" href="/dist/css/common/reset.css">
     <link rel="stylesheet" type="text/css" href="/dist/css/common/head.css">
     <link rel="stylesheet" type="text/css" href="/dist/css/common/footer.css">
+    <link rel="stylesheet" type="text/css" href="/dist/css/plugins/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/dist/css/plugins/animate.css">
     <link rel="stylesheet" type="text/css" href="/dist/css/pages/index.css">
     <title>易企卖</title>
     <style type="text/css">
-        /*头部样式*/
-        #wrap{ width: 640px; position: relative;left:50%;top:0;margin-left: -320px;overflow: hidden;border: 1px solid red;height: 800px}
+        /*头部样式, 暂时寄存  样式层级不要超过3层*/
+        /*主流分辨率:240*320(一般不考虑)、320*480、480*800(多)、640*960(多) 480*854 1280*720 800*1280 1080*1920*/
+        @media screen and (min-width:640px){
+            html,body{font-size: 16px;}
+        }
+        @media screen and (min-width: 480px) and (max-width: 639px){
+            html,body{ font-size: 32px;}
+        }
+        @media screen and (min-width: 480px) and (max-width: 479px){
+            html,body{ font-size: 32px;}
+        }
+
+        html,body{width: 100%;height:100%;background: #f0f0f0 }
+        .container-fluid{font-family:Microsoft YaHei,"微软雅黑"}
+        #head{
+            width:100%;
+            /*rem=实际上的像素除以根的14字体大小*/
+            height: 5.5rem;
+            line-height: 5.5rem;
+            text-align: center;
+            font-size: 0.5625rem;
+            position: fixed;
+            top:0;
+            left:0;
+            background: #1b252f;
+            color: #fff;
+            z-index: 10;
+        }
+        .fl{float: left}
+        .fr{float: right}
+        .clear:after{ clear: both; display: block; content:"";}
+        #head .leftlogo{float: left;width: 6.875rem;margin-left:2.185rem;cursor: pointer;display: inline-block;margin-top:1.0625rem }
+        #head .rightBtn{float: right;width: 1.875rem;margin-right: 1.875rem;cursor: pointer;display: inline-block;margin-top: 1.75rem}
+        #main{width: 100%;position: absolute;top: 5.5rem;left: 0;background: #fff;bottom: 6.125rem;overflow:auto }
+        #main .floor1{width: 100%;height: 18.625rem;background:url(/dist/img/index/index3.png) no-repeat; background-size:contain; box-sizing:border-box;}
+        #main .floor2{background: #fff;}
+        #main .adv_title{text-align: center;font-size: 2.125rem;color: #7ab55c;margin-top: 3.75rem;margin-bottom: 3.75rem}
+        #main .floor2 .adv_list{margin: 0 auto}
+        .floor2 .adv_list li{float: left;width:50% ;height: 16.875rem;text-align: center}
+        .adv_list .txt1{font-size:1.5rem }
+        .adv_list .txt2{font-size:1.25rem }
+        #main .floor3{background: #f5f6fa;height:59.875rem;border: 1px solid transparent; }
+        .floor3 .effict{width: 36.25rem;height: 10.25rem;background: #fff;padding: 1.75rem;border-radius: 10px;margin: 0 auto;
+            -webkit-box-shadow: 0px 4px 6px #ccc;
+            -moz-box-shadow: 0px 4px 6px #ccc;
+            box-shadow: 0px 4px 6px #ccc;
+        }
+        .floor3 .effict .txt1{font-size: 1.75rem;color: #3d3d3d}
+        .floor3 .effict .txt2{font-size: 1.5rem;color:#828282 }
+        .floor3 .effict .eff-img{margin-right: 0.9375rem;margin-top: 0.5rem}
+        .floor3 .arrow{text-align: center}
+        .floor3 .arrow .arrow_img{margin-top:2.125rem;margin-bottom: 2.25rem; }
+        .floor4{width: 100%;height:11.125rem;border: 1px solid transparent }
+        .floor4 .txt1{font-size:1.875rem ;color: #646464;}
+        .floor4 .regCon{text-align: center;margin-top: 3.75rem}
+        .floor4 .regBtn{display: inline-block;font-size: 1.75rem;color: #fff;background:#7ab55c;width: 11.25rem;height: 3.375rem;line-height: 3.375rem;text-align: center;margin-left: 1.25rem;border-radius: 3px }
+        .floor5{background-color: #252f37;color: #d9d9d9;width: 100%;text-align: center;font-size: 0.75rem;height: 6.125rem;overflow: hidden}
+        .floor5 .bot1{margin-top:1.625rem }
+        .floor5 .bot2{}
+        #foot{height: 6.125rem;width: 100%;position: fixed;bottom: 1px;left: 0px;background-color: #252f37;color: #fff;font-size: 1.5rem}
+        #foot>ul{margin: 0 auto;width:100%}
+        #foot>ul>li{
+            margin-top:0.625rem ;
+            float: left;
+            width: 10rem;
+            height: 5.5rem;
+            background-size:cover; box-sizing:border-box;
+            font-size: 1.5rem;
+            color: #fff;
+            text-align: center;
+            padding-top: 3rem;
+        }
+        #foot>ul>li:nth-of-type(1){
+            margin-left: 2.875rem;
+           background:url("/dist/img/index/foot1.png") no-repeat center top;;
+        }
+        #foot>ul>li:nth-of-type(2){
+            background:url("/dist/img/index/foot2.png") no-repeat center top;;
+        }
+        #foot>ul>li:nth-of-type(3){
+            background:url("/dist/img/index/foot3.png") no-repeat center top;;
+        }
+        #foot>ul>li:nth-of-type(4){
+            background:url("/dist/img/index/foot4.png") no-repeat center top;;
+        }
+        #foot>ul>li>span{margin-top: 10px}
     </style>
 </head>
 <body>
-<div id="wrap">
-    <header id="head" style="color: yellow;font-size: 30px">我是头部</header>
-    <section id="main"></section>
-    <footer id="foot"></footer>
+<div class="container-fluid">
+    <header id="head">
+        <img class="leftlogo" src="/dist/img/index/index2.png" />
+        <img  class="rightBtn" src="/dist/img/index/index1.png" />
+    </header>
+    <section id="main">
+        <div class="floor1">
+        </div>
+        <div class="floor2">
+           <div class="adv_title"><span>我们的优势</span></div>
+            <ul class="adv_list clear">
+                <li>
+                    <img src="/dist/img/index/index6.png" />
+                    <div>
+                        <p class="txt1">快速创建店铺</p>
+                        <p class="txt2">
+                            注册取名一步完成、域名一键</br>
+                            绑定、全程提供备案服务
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <img src="/dist/img/index/index4.png" />
+                    <div>
+                        <p class="txt1">个性化会员管理</p>
+                        <p class="txt2">
+                            店铺会员级别、名称、图标</br>
+                            支持个性化修改设置
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <img src="/dist/img/index/index5.png" />
+                    <div>
+                        <p class="txt1">安全可靠坐等盈利</p>
+                        <p class="txt2">
+                            专业的搜索优化，方便快捷的</br>
+                            支付方式，专业的数据后台
+                        </p>
+                    </div>
+
+                </li>
+                <li>
+                    <img src="/dist/img/index/index7.png" />
+                    <div>
+                        <p class="txt1">专业的店铺管理</p>
+                        <p class="txt2">
+                            多维度数据营销数据解析，</br>
+                            订单管理，个性化物流管理
+
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="floor3">
+            <div class="adv_title"><span>让商城运营简单高效</span></div>
+            <div class="effict">
+                <img class="fl eff-img" src="/dist/img/index/index12.png" />
+                <div class="txt1">自助开通</div>
+                <div class="txt2">注册开通零成本，完美体验自动化服务</div>
+            </div>
+            <div class="arrow">
+                <img class="arrow_img" src="/dist/img/index/index15.png" alt=""/>
+            </div>
+            <div class="effict">
+                <img class="fl eff-img" src="/dist/img/index/index13.png" />
+                <div class="txt1">顶级运维</div>
+                <div class="txt2">全方位运维保证，安全放心无障碍使用</div>
+            </div>
+            <div class="arrow">
+                <img class="arrow_img" src="/dist/img/index/index16.png" alt=""/>
+            </div>
+            <div class="effict">
+                <img class="fl eff-img" src="/dist/img/index/index14.png" />
+                <div class="txt1">全程服务</div>
+                <div class="txt2">1对1售后服务，扫平一切后顾之忧</div>
+            </div>
+            
+        </div>
+        <div class="floor4">
+           <p class="regCon">
+               <span class="txt1">如果您也想拥有，请点击</span>
+               <span class="regBtn">免费体验</span>
+           </p>
+        </div>
+        <div class="floor5">
+            <p class="bot1">
+                <span>版权所有</span>
+                <span>Copyright</span>
+                <span>1999-2016 300.cn All Rights Reserved</span>
+            </p>
+            <p class="bot2">
+                <span>电脑版请访问 www.shopce.cn</span>
+            </p>
+        </div>
+    </section>
+    <footer id="foot">
+        <ul class="clear">
+            <li>
+                <span>首页</span>
+            </li>
+            <li><span>电话咨询</span></li>
+            <li><span>QQ咨询</span></li>
+            <li><span>返回顶部</span></li>
+        </ul>
+    </footer>
 </div>
 
 </body>

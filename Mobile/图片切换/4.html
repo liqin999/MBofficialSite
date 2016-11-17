@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<meta name="viewport" content="width=device-width,target-densitydpi=device-dpi,user-scalable=no">
+<script>
+document.getElementsByTagName("html")[0].style.fontSize=window.screen.width/10+"px";
+</script>
+<style>
+body{margin:0;font-size:0.4rem;background:#e1e1e1;}
+#picWrap{width:100%;overflow:hidden;}
+#picList{width:40rem;overflow:hidden;}
+#picList a{float:left;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+#picList img{width:10rem;}
+#btns{margin:0;padding:0.15rem;height:0.2rem; text-align:center;}
+#btns span{ display:inline-block;width:0.2rem;height:0.2rem;margin:0 0.1rem; vertical-align:top;border:1px solid #000; box-sizing:border-box; border-radius:0.1rem;}
+#btns .active{ background:#f60;}
+</style>
+</head>
+<body>
+<section id="picWrap">
+	<nav id="picList">
+    	<a data-href="http://www.baidu.com" ontouchmove="this.s=1" ontouchend="this.s||window.open(this.dataset.href),this.s=0">
+        	<img src="img/1.jpg" />
+        </a>
+        <a data-href="http://www.qq.com"  ontouchmove="this.s=1" ontouchend="this.s||window.open(this.dataset.href),this.s=0">
+        	<img src="img/2.jpg" />
+        </a>
+        <a data-href="http://www.miaov.com"  ontouchmove="this.s=1" ontouchend="this.s||window.open(this.dataset.href),this.s=0">
+        	<img src="img/3.jpg" />
+        </a>
+        <a data-href="http://www.163.com"  ontouchmove="this.s=1" ontouchend="this.s||window.open(this.dataset.href),this.s=0">
+        	<img src="img/4.jpg" />
+        </a>
+    </nav>
+</section>
+<p id="btns">
+	<span class="active"></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</p>
+<script>
+var oPicList=document.getElementById("picList");
+var aBtns=document.getElementById("btns").children;
+var iScroll=0;
+var iNow=0;
+var iStartX=0;
+var iStartScroll=0;
+document.ontouchmove=function(e)
+{
+     e.preventDefault();
+};
+oPicList.ontouchstart=function(e)
+{
+	iStartX=e.changedTouches[0].pageX;
+	iStartScroll=iScroll;
+};
+oPicList.ontouchmove=function(e)
+{
+	var iDis=e.changedTouches[0].pageX-iStartX;
+	iScroll=iStartScroll+iDis;
+	toStyel();
+};
+oPicList.ontouchend=function(e)
+{
+	var iDis=e.changedTouches[0].pageX-iStartX;
+	iScroll=iStartScroll+iDis;
+	iNow=-iScroll/window.screen.width;
+	iNow=iNow%1<0.3?Math.floor(iNow):Math.ceil(iNow);	
+	if(iNow<0)
+	{
+		iNow=0;
+	}
+	if(iNow>aBtns.length-1)
+	{
+		iNow=aBtns.length-1;
+	}
+	iScroll=-iNow*window.screen.width;
+	for(var i=0;i<aBtns.length;i++)
+	{
+		if(i!=iNow)
+		{
+			aBtns[i].className="";
+		}
+		else
+		{
+			aBtns[i].className="active";
+		}
+	}
+	oPicList.style.WebkitTransition=oPicList.style.transition="0.3s";
+	toStyel();
+};
+function toStyel()
+{
+	oPicList.style.WebkitTransform=oPicList.style.transform="translateX("+iScroll+"px)";
+}
+</script>
+</body>
+</html>
