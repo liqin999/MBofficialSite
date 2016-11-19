@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="format-detection" content="telephone=yes"/>
     <meta name="renderer" content="webkit">
     <meta name="keywords" content="your keywords">
     <meta name="description" content="your description">
@@ -22,6 +23,12 @@
     <style type="text/css">
         /*头部样式, 暂时寄存  样式层级不要超过3层*/
         /*主流分辨率:240*320(一般不考虑)、320*480、480*800(多)、640*960(多) 480*854 1280*720 800*1280 1080*1920*/
+        a{color:#fff}
+        a:link{color:#fff}
+        a:visited{color:#fff}
+        a:hover{color:#fff}
+        a:active{color:#fff}
+        a.block{display: block;}
         html,body{width: 100%;height:100%;background: #f0f0f0 }
         #head{
             width:100%;
@@ -48,8 +55,8 @@
         #main .floor2 .adv_list{margin: 0.02rem auto 0rem auto;box-sizing:border-box; padding-bottom: 0.25rem}
         .floor2 .adv_list li{float: left;width:45% ;height: auto;text-align: center;margin: 0.02rem 0.05rem;}
         .floor2 .adv_list li img{width:0.368rem ;height: 0.4rem}
-        .floor2 .adv_list .txt1{font-size:0.075rem;color: #555;margin-top: 0.045rem}
-        .floor2 .adv_list .txt2{font-size:0.0625rem;color: #666;margin-top: 0rem}
+        .floor2 .adv_list .txt1{font-size:0.075rem;color: #555;margin-top: 0.045rem;}
+        .floor2 .adv_list .txt2{font-size:0.0625rem;color: #666;margin-top: 0rem;}
         #main .floor3{background: #f5f6fa;height:2.99375rem;border: 1px solid transparent; }
         .floor3 .effict{width: 92%;height: 0.5125rem;background: #fff;padding: 0.0875rem;border-radius: 6px;margin: 0 auto;
             -webkit-box-shadow: 0px 4px 6px #ccc;
@@ -73,9 +80,17 @@
         #foot>ul{margin: 0 auto;width:100%}
         #foot>ul>li{ margin-top:0.04rem ;float: left; width: 25%;height: 98px;background-size:cover; box-sizing:border-box;font-size: 0.075rem; color: #fff; text-align: center;background: url("/dist/img/index/lineBg.jpg") no-repeat right top ;background-size: 2px 0.24375rem}
         #foot>ul>li:nth-of-type(1){margin-left: 0rem; }
-        #foot>ul>li>img{max-width: 100%;height: 26px }
+        #foot>ul>li img{max-width: 100%;height: 26px }
         #foot>ul>li>span{margin-top: 10px}
         #foot>ul>li#back{background: none}
+        /*针对小屏的手机底部版权的处理*/
+        @media all and (max-width:400px)
+        {
+            .floor5 .bot1, .floor5 .bot2
+            {
+                margin-bottom:  0;
+            }
+        }
     </style>
 </head>
 <body>
@@ -171,13 +186,19 @@
                 <div>首页</div>
             </li>
             <li>
-                <img src="/dist/img/index/foot2.png"/>
-                <div>电话咨询</div>
+                <a href="tel:10086" class="block">
+                     <img src="/dist/img/index/foot2.png"/>
+                    <div>电话咨询</div>
+                </a>
             </li>
+
             <li>
-                <img src="/dist/img/index/foot3.png"/>
-                <div>QQ咨询</div>
+                <a class="block" href="mqqwpa://im/chat?chat_type=wpa&uin=1483510623&version=1&src_type=web&web_src=oicqzone.com">
+                    <img src="/dist/img/index/foot3.png"/>
+                    <div>QQ咨询</div>
+                 </a>
             </li>
+
             <li id="back">
                 <img src="/dist/img/index/foot4.png"/>
                 <div>返回顶部</div>
