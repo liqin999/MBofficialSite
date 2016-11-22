@@ -10,102 +10,12 @@
     <meta name="description" content="your description">
     <meta name="viewport" content ="initial-scale=1.0,maximum-scale=1,user-scalable=no">
 
-    <link rel="stylesheet" type="text/css" href="/dist/css/common/reset.css">
-    <link rel="stylesheet" type="text/css" href="/dist/css/common/head.css">
-    <link rel="stylesheet" type="text/css" href="/dist/css/common/footer.css">
     <link rel="stylesheet" type="text/css" href="/dist/css/plugins/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/dist/css/common/reset.css">
+    <link rel="stylesheet" type="text/css" href="/dist/css/common/public.css">
     <link rel="stylesheet" type="text/css" href="/dist/css/plugins/animate.css">
     <link rel="stylesheet" type="text/css" href="/dist/css/pages/index.css">
     <title>易企卖</title>
-    <script>
-        document.getElementsByTagName("html")[0].style.fontSize=document.documentElement.clientWidth/2+"px";
-    </script>
-    <style type="text/css">
-        /*头部样式, 暂时寄存  样式层级不要超过3层*/
-        /*主流分辨率:240*320(一般不考虑)、320*480、480*800(多)、640*960(多) 480*854 1280*720 800*1280 1080*1920*/
-        a{color:#fff}
-        a:link{color:#fff}
-        a:visited{color:#fff}
-        a:hover{color:#fff}
-        a:active{color:#fff}
-        a:focus{text-decoration:none}
-        a.block{display: block;}
-        html,body{width: 100%;height:100%;background: #f0f0f0;font-family:Microsoft YaHei,"微软雅黑";overflow-x: hidden }
-        #head{
-            width:100%;
-            /*rem=实际上的像素除以根的14字体大小*/
-            /*元素的实际大小除以320 通过比例计算得出公式*/
-            height:0.25rem;
-            line-height: 0.25rem;
-            text-align: center;
-            background: #1b252f;
-            color: #fff;
-            position: absolute;
-        }
-        .fl{float: left}
-        .fr{float: right}
-        .clear:after{ clear: both; display: block; content:"";}
-        #head .leftlogo{float: left;width: 0.34375rem;margin-left:0.10925rem;cursor: pointer;display: inline-block;margin-top:0.053125rem }
-        #head .rightBtn{float: right;width: 0.09375rem;margin-right: 0.09375rem;cursor: pointer;display: inline-block;margin-top: 0.0875rem}
-        #main{width: 100%;position: absolute;top: 0.275rem;left: 0;background: #fff;bottom: 0.30625rem;}
-        /*#main .floor1{width: 100%;height: 0.93125rem;}*/
-        #main .floor1{width: 100%;}
-        #main .floor1 img{max-width: 100%;}
-        #main .floor2{background: #fff;}
-        #main .adv_title{text-align: center;font-size: 0.10625rem;color: #7ab55c;margin-top: 0.25rem;margin-bottom: 0.1875rem}
-        #main .floor2 .adv_list{margin: 0.02rem auto 0rem auto;box-sizing:border-box; padding-bottom: 0.25rem}
-        .floor2 .adv_list li{
-            box-sizing: border-box;
-            float: left;width:50% ;height: auto;text-align: center;padding: 0.02rem 0.05rem;
-        }
-        .floor2 .adv_list li img{width:0.368rem ;height: 0.4rem}
-        .floor2 .adv_list .txt1{font-size:0.075rem;color: #555;margin-top: 0.045rem;}
-        .floor2 .adv_list .txt2{font-size:0.0625rem;color: #666;margin-top: 0rem;}
-        #main .floor3{background: #f5f6fa;height:2.99375rem;border: 1px solid transparent; }
-        .floor3 .effict{width: 92%;height: 0.5125rem;background: #fff;padding: 0.0875rem;border-radius: 6px;margin: 0 auto;
-            -webkit-box-shadow: 0px 4px 6px #ccc;
-            -moz-box-shadow: 0px 4px 6px #ccc;
-            box-shadow: 0px 4px 6px #ccc;
-        }
-        .floor3 .effict .txt1{font-size: 0.0875rem;color: #3d3d3d;margin-top: 0.02rem}
-        .floor3 .effict .txt2{font-size: 0.075rem;color:#828282 }
-        .floor3 .effict .eff-img{margin-right: 0.046875rem;margin-top: 0.025rem;width:0.3rem ;height:0.3rem }
-        .floor3 .arrow{text-align: center}
-        .floor3 .arrow .arrow_img{margin-top:0.10625rem;margin-bottom: 0.1125rem; width: 0.23rem;height:0.15rem }
-        .floor4{width: 100%;height:0.55625rem;border: 1px solid transparent }
-        .floor4 .txt1{font-size:0.09375rem ;color: #646464;}
-        .floor4 .regCon{text-align: center;margin-top: 0.1875rem}
-        .floor4 .regBtn{display: inline-block;font-size: 0.0875rem;color: #fff;background:#7ab55c;width: 0.5625rem;height: 0.16875rem;line-height: 0.16875rem;text-align: center;margin-left: 0.0625rem;border-radius: 3px }
-        .floor5{background-color: #3d464d;color: #d9d9d9;width: 100%;text-align: center;font-size: 0.0375rem;height: 0.4rem;overflow: hidden}
-        .floor5 .bot1{margin-top:0.08125rem }
-        .floor6{height: 0.30625rem;width: 100%}
-        #foot{height: 0.30625rem;width: 100%;position: fixed;bottom: 0px;left: 0px;background-color: #252f37;color: #fff;font-size: 0.075rem;}
-        #foot>ul{margin: 0 auto;width:100%}
-        #foot>ul>li{ margin-top:0.04rem ;float: left; width: 25%;height: 98px;background-size:cover; box-sizing:border-box;font-size: 0.075rem; color: #fff; text-align: center;background: url("/dist/img/index/lineBg.jpg") no-repeat right top ;background-size: 2px 0.24375rem}
-        #foot>ul>li:nth-of-type(1){margin-left: 0rem; }
-        #foot>ul>li img{max-width: 100%;height: 26px }
-        #foot>ul>li>span{margin-top: 10px}
-        #foot>ul>li#back{background: none}
-        /*针对小屏的手机底部版权的处理,css*/
-        @media all and (max-width:400px)
-        {
-            .floor5 .bot1, .floor5 .bot2
-            {
-                margin-bottom:  0;
-            }
-        }
-        #sideBar{ width:100%;text-align: center; background: #1b252f;color: #fff; position: absolute;top: 0rem;            left: 2.1rem;display: none}
-        #sideBar> .listnav{height: 0.25rem;line-height:0.25rem;font-size: 0.095rem;color: #fff;}
-        #sideBar> .listnav>li{text-align: left;margin-left:0.18rem;}
-        #sideBar> .regin{width: 100%;position: absolute;bottom: 0;margin-bottom: 0}
-        #sideBar> .regin>li{float: left;width:0.75rem;height: 0.30625rem;line-height:0.30625rem;text-align: center;background:#7ab55c;color: #fff;font-size: 0.08rem  }
-       #sideBar> .regin>li:nth-of-type(1){
-           background-image: url("/dist/img/index/rightline.png") ;
-           background-position: right center;
-           background-repeat: no-repeat;
-           background-size:2px 0.0875rem ;
-       }
-    </style>
 </head>
 <body>
     <header id="head">
@@ -222,61 +132,17 @@
     <!--右边侧栏-->
     <div id="sideBar">
         <ul class="listnav">
-            <li class="active"><a href="#">首页</a></li>
-            <li><a href="#">产品</a></li>
-            <li><a href="#">服务</a></li>
+            <li class="active"><a href="/index.html"><img src="/dist/img/index/index17.png"/>首页</a></li>
+            <li><a href="/pages/index/product.html"><img src="/dist/img/index/index18.png"/>产品</a></li>
+            <li><a href="#"><img src="/dist/img/index/index19.png"/>服务</a></li>
         </ul>
         <ul class="regin clear">
             <li>登录</li>
             <li>注册</li>
         </ul>
     </div>
-<script type="text/javascript">
-    var back=document.getElementById("back");
-    var main=document.getElementById("main");
-    var rightBtn=document.getElementById("rightBtn");
-    var head=document.getElementById("head");
-    var foot=document.getElementById("foot");
-    var sideBar=document.getElementById("sideBar");
-    var clienH=document.documentElement.clientHeight;
-    var flagLogin=true;
-    //实现滚动条无法滚动
-    var mo=function(e){e.preventDefault()};
-    /***禁止滑动***/
-    function stopSroll(){
-        document.body.style.overflow='hidden';
-        document.addEventListener("touchmove",mo,false);//禁止页面滑动
-    }
-    /***取消滑动限制***/
-    function moveSroll(){
-        document.body.style.overflowY='';//出现滚动条
-        document.removeEventListener("touchmove",mo,false);
-    }
-    back.addEventListener("touchend",backtop,false);
-    rightBtn.addEventListener("touchend",loginBtn,false);
-    function backtop(){ var winHeight=document.documentElement.scrollTop||document.body.scrollTop;
-        document.documentElement.scrollTop=document.body.scrollTop=0+"px"};
-    function loginBtn(){
-        if(flagLogin){
-            head.style.left=-1.5+"rem";
-            main.style.left=-1.5+"rem";
-            foot.style.left=-1.5+"rem";
-            sideBar.style.display="block";
-            sideBar.style.left=0.5+"rem";
-            //禁止屏幕滚动的
-            stopSroll();
-        }else{
-            head.style.left=0+"rem";
-            main.style.left=0+"rem";
-            foot.style.left=0+"rem";
-            sideBar.style.display="none";
-            sideBar.style.left=2+"rem";
-            //允许屏幕滚动的
-            moveSroll();
-        }
-        flagLogin=!flagLogin;
-    }
-    sideBar.style.height=clienH+"px";
-</script>
 </body>
+<script type="text/javascript" src="/library/Zepto/zepto.js"></script>
+<script type="text/javascript" src="/dist/js/pages/index/init.js"></script>
+<script type="text/javascript" src="/dist/js/public.js"></script>
 </html>

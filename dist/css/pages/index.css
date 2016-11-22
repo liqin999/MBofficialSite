@@ -1,0 +1,41 @@
+#main{width: 100%;position: absolute;top: 0.275rem;left: 0;background: #fff;bottom: 0.30625rem;}
+/*#main .floor1{width: 100%;height: 0.93125rem;}*/
+#main .floor1{width: 100%;}
+#main .floor1 img{max-width: 100%;}
+#main .floor2{background: #fff;}
+#main .adv_title{text-align: center;font-size: 0.10625rem;color: #7ab55c;margin-top: 0.25rem;margin-bottom: 0.1875rem}
+#main .floor2 .adv_list{margin: 0.02rem auto 0rem auto;box-sizing:border-box; padding-bottom: 0.25rem}
+.floor2 .adv_list li{
+    box-sizing: border-box;
+    float: left;width:50% ;height: auto;text-align: center;padding: 0.02rem 0.05rem;
+}
+.floor2 .adv_list li img{width:0.368rem ;height: 0.4rem}
+.floor2 .adv_list .txt1{font-size:0.075rem;color: #555;margin-top: 0.045rem;}
+.floor2 .adv_list .txt2{font-size:0.0625rem;color: #666;margin-top: 0rem;}
+#main .floor3{background: #f5f6fa;height:2.99375rem;border: 1px solid transparent; }
+.floor3 .effict{width: 92%;height: 0.5125rem;background: #fff;padding: 0.0875rem;border-radius: 6px;margin: 0 auto;
+    -webkit-box-shadow: 0px 4px 6px #ccc;
+    -moz-box-shadow: 0px 4px 6px #ccc;
+    box-shadow: 0px 4px 6px #ccc;
+}
+.floor3 .effict .txt1{font-size: 0.0875rem;color: #3d3d3d;margin-top: 0.02rem}
+.floor3 .effict .txt2{font-size: 0.075rem;color:#828282 }
+.floor3 .effict .eff-img{margin-right: 0.046875rem;margin-top: 0.025rem;width:0.3rem ;height:0.3rem }
+.floor3 .arrow{text-align: center}
+.floor3 .arrow .arrow_img{margin-top:0.10625rem;margin-bottom: 0.1125rem; width: 0.23rem;height:0.15rem }
+.floor4{width: 100%;height:0.55625rem;border: 1px solid transparent }
+.floor4 .txt1{font-size:0.09375rem ;color: #646464;}
+.floor4 .regCon{text-align: center;margin-top: 0.1875rem}
+.floor4 .regBtn{display: inline-block;font-size: 0.0875rem;color: #fff;background:#7ab55c;width: 0.5625rem;height: 0.16875rem;line-height: 0.16875rem;text-align: center;margin-left: 0.0625rem;border-radius: 3px }
+.floor5{background-color: #3d464d;color: #d9d9d9;width: 100%;text-align: center;font-size: 0.0375rem;height: 0.4rem;overflow: hidden}
+.floor5 .bot1{margin-top:0.08125rem }
+.floor6{height: 0.30625rem;width: 100%}
+
+/*针对小屏的手机底部版权的处理,css*/
+@media all and (max-width:400px)
+{
+    .floor5 .bot1, .floor5 .bot2
+    {
+        margin-bottom:  0;
+    }
+}
