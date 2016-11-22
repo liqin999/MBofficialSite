@@ -16,13 +16,12 @@
     <link rel="stylesheet" type="text/css" href="/dist/css/plugins/animate.css">
     <link rel="stylesheet" type="text/css" href="/dist/css/pages/index.css">
     <title>易企卖</title>
+    <script type="text/javascript" src="/library/Zepto/zepto.js"></script>
+    <script type="text/javascript" src="/dist/js/pages/index/init.js"></script>
 </head>
 <body>
-    <header id="head">
-        <img class="leftlogo" src="/dist/img/index/index2.png" />
-        <img class="rightBtn" id="rightBtn" src="/dist/img/index/index1.png" />
-    </header>
-    <section id="main">
+<!--#include virtual="/public/header.html"-->
+<section id="main">
         <div class="floor1">
             <img src="/dist/img/index/index3.png"/>
         </div>
@@ -103,46 +102,8 @@
         </div>
         <div class="floor6"></div>
     </section>
-    <footer id="foot">
-        <ul class="clear">
-            <li>
-                <img src="/dist/img/index/foot1.png"/>
-                <div>首页</div>
-            </li>
-            <li>
-                <a href="tel:10086" class="block">
-                     <img src="/dist/img/index/foot2.png"/>
-                    <div>电话咨询</div>
-                </a>
-            </li>
-
-            <li>
-                <a class="block" href="mqqwpa://im/chat?chat_type=wpa&uin=1483510623&version=1&src_type=web&web_src=oicqzone.com">
-                    <img src="/dist/img/index/foot3.png"/>
-                    <div>QQ咨询</div>
-                 </a>
-            </li>
-
-            <li id="back">
-                <img src="/dist/img/index/foot4.png"/>
-                <div>返回顶部</div>
-            </li>
-        </ul>
-    </footer>
-    <!--右边侧栏-->
-    <div id="sideBar">
-        <ul class="listnav">
-            <li class="active"><a href="/index.html"><img src="/dist/img/index/index17.png"/>首页</a></li>
-            <li><a href="/pages/index/product.html"><img src="/dist/img/index/index18.png"/>产品</a></li>
-            <li><a href="#"><img src="/dist/img/index/index19.png"/>服务</a></li>
-        </ul>
-        <ul class="regin clear">
-            <li>登录</li>
-            <li>注册</li>
-        </ul>
-    </div>
+<!--#include virtual="/public/footer.html"-->
+<!--#include virtual="/public/sidebar.html"-->
 </body>
-<script type="text/javascript" src="/library/Zepto/zepto.js"></script>
-<script type="text/javascript" src="/dist/js/pages/index/init.js"></script>
 <script type="text/javascript" src="/dist/js/public.js"></script>
 </html>

@@ -2,14 +2,14 @@
 #head{
     width:100%;
     /*元素的实际大小除以320 通过比例计算得出公式*/
-    height:0.25rem;
-    line-height: 0.25rem;
+    height:0.30625rem;
+    line-height:0.30625rem;
     text-align: center;
     background: #1b252f;
     color: #fff;
     position: absolute;
 }
-#head .leftlogo{float: left;width: 0.34375rem;margin-left:0.10925rem;cursor: pointer;display: inline-block;margin-top:0.053125rem }
+#head .leftlogo{float: left;width: 0.34375rem;margin-left:0.10925rem;cursor: pointer;display: inline-block;margin-top:0.06rem }
 #head .rightBtn{float: right;width: 0.09375rem;margin-right: 0.09375rem;cursor: pointer;display: inline-block;margin-top: 0.0875rem}
 
 /*尾部信息*/
@@ -24,7 +24,7 @@
 /*右边侧栏信息*/
 #sideBar{ width:100%;text-align: center; background: #1b252f;color: #fff; position: absolute;top: 0rem;            left: 2.1rem;display: none;margin-left: 5px}
 #sideBar> .listnav{height: 0.25rem;line-height:0.25rem;font-size: 0.095rem;color: #fff;}
-#sideBar> .listnav>li{text-align: left;margin-left:0.1rem;padding-top: 2px}
+#sideBar> .listnav>li{text-align: left;margin-left:0.1rem;padding-top: 2px;border-bottom: 1px solid #2a3a4a;width: 0.8rem}
 #sideBar> .listnav>li img{width: 0.125rem;height: 0.125rem;margin-top: -0.025rem;margin-right: 10px }
 #sideBar> .regin{width: 100%;position: absolute;bottom: 0;margin-bottom: 0;box-sizing: border-box}
 #sideBar> .regin>li{float: left;width:0.5rem;height: 0.30625rem;line-height:0.30625rem;text-align: center;background:#7ab55c;color: #fff;font-size: 0.08rem  }
@@ -35,6 +35,15 @@
     background-size:2px 0.0875rem ;
 }
 
+/*针对ipad底部版权的处理,css*/
+@media all and (min-width:640px)
+{
+  #foot>ul>li img
+    {
+       height:0.156rem ;
+       width:0.156rem ;
+    }
+}
 /*一些恢复公共的样式*/
 a{color:#fff}
 a:link{color:#fff}
