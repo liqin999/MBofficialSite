@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>无标题文档</title>
-<meta name="viewport" content="width=device-width,target-densitydpi=device-dpi,user-scalable=no">
+<meta name="viewport" content="width=device-width,user-scalable=no">
 <style>
 div{width:100px;height:100px;background:Red;}
 </style>
@@ -12,15 +12,17 @@ div{width:100px;height:100px;background:Red;}
 <div id="box"></div>
 <script>
 var oBox=document.getElementById("box");
-oBox.ontouchstart=function(e)
+oBox.addEventListener("touchstart",fn1,false);
+function fn1(e)
 {
-	//console.log(e.touches);
+	console.log(e.touches);
 };
 oBox.ontouchmove=function()
 {
 	//console.log(e.touches);
 };
-oBox.ontouchend=function(e)
+oBox.addEventListener("touchend",fn2,false);
+function fn2(e)
 {
 	console.log(e.changedTouches);
 };

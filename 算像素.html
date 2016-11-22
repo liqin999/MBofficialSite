@@ -18,73 +18,37 @@
     <link rel="stylesheet" type="text/css" href="/dist/css/pages/index.css">
     <title></title>
     <style type="text/css">
-        .transtion{width: 100px;height: 100px;background: royalblue;
-             border-radius: 0.5rem;
-           -webkit-transition: all 4s linear 1s;
-            transition: all 4s linear 1s;
-        }
-        .transtion:hover{
-            background:red;
-            border-radius: 50%;
-        }
+        .transtion{width: 100px;height: 100px;background: royalblue; border-radius: 0.5rem; -webkit-transition: all 4s linear 1s;transition: all 4s linear 1s;}
+        .transtion:hover{ background:red;border-radius: 50%;}
+        ul{width: 502px;height: 502px;border: 1px dashed green;position: relative}
+        ul li{list-style: none;padding: 0;margin: 0}
+        ul li{width: 100px;height: 100px;background: #ccc;color: red;font-size: 28px;text-align: center;line-height: 100px;float: left;cursor: move;box-sizing: border-box;border: 1px solid fuchsia}
     </style>
 </head>
 <body>
-<nav class="navbar navbar-default" role="navigation">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse"
-                    data-target="#example-navbar-collapse">
-                <span class="sr-only">切换导航</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">菜鸟教程</a>
-        </div>
-        <div class="collapse navbar-collapse" id="example-navbar-collapse">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">iOS</a></li>
-                <li><a href="#">SVN</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        Java <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">jmeter</a></li>
-                        <li><a href="#">EJB</a></li>
-                        <li><a href="#">Jasper Report</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">分离的链接</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">另一个分离的链接</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-<form action="">
-    <input type="text" id="btn"/>
-    <input type="text" id="result"/></br>
-    <input type="reset" value="重置" style="margin-top: 20px;width: 100px; height: 100px;cursor: pointer"/>
-</form>
-
 <ul>
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>4</li>
-    <li>5</li>
 </ul>
-
 <div class="transtion"></div>
-<script src="/MBofficialSite/library/jquery/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="/library/jquery/jquery-1.11.1.min.js"></script>
 <script type="text/javascript">
     var ul=document.getElementsByTagName("ul")[0];
-    $(function () {
-     $("li").css("color","red")
-    });
+    var olis=ul.getElementsByTagName("li")
+    var oli="";
+    for(var i=1;i<=25;i++){
+        oli+="<li>"+i+"</li>";
+        //创建25和li
+    }
+    ul.innerHTML=oli;
+    function posi(){
+        //用定位的方式实现
+        for(var i=0;i<olis.length;i++){
+             olis[i].style.position="absolute";
+             olis[i].style.top=Math.floor(i/5)*100+"px";
+             olis[i].style.left=(i%5)*100+"px";
+        }
+    }
+
+    posi();
 
     function px(num){
         return num*16/320;
