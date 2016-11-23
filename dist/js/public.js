@@ -11,8 +11,10 @@ var clienH=document.documentElement.clientHeight;
 var flagLogin=true;
 back.addEventListener("touchend",backtop,false);
 rightBtn.addEventListener("touchend",loginBtn,false);
-function backtop(){ var winHeight=document.documentElement.scrollTop||document.body.scrollTop;
-    document.documentElement.scrollTop=document.body.scrollTop=0+"px"};
+function backtop(){
+    var winHeight=document.documentElement.scrollTop||document.body.scrollTop;
+    document.documentElement.scrollTop=document.body.scrollTop=0+"px"
+};
 //实现滚动条无法滚动
 var mo=function(e){e.preventDefault()};
 /***禁止滑动***/
@@ -24,7 +26,14 @@ function stopSroll(){
 function moveSroll(){
     document.body.style.overflowY='';//出现滚动条
     document.removeEventListener("touchmove",mo,false);
-}
+};
+function goback(){
+    head.style.left=0+"rem";
+    main.style.left=0+"rem";
+    foot.style.left=0+"rem";
+    sideBar.style.display="none";
+    sideBar.style.left=2+"rem";
+};
 function loginBtn(){
     if(flagLogin){
         head.style.left=-1+"rem";
@@ -34,12 +43,11 @@ function loginBtn(){
         sideBar.style.left=1+"rem";
         //禁止屏幕滚动的
         stopSroll();
+        main.addEventListener("touchend",function(){
+            goback();
+        },false);
     }else{
-        head.style.left=0+"rem";
-        main.style.left=0+"rem";
-        foot.style.left=0+"rem";
-        sideBar.style.display="none";
-        sideBar.style.left=2+"rem";
+        goback();
         //允许屏幕滚动的
         moveSroll();
     }
