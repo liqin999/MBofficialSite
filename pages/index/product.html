@@ -18,12 +18,55 @@
     <script type="text/javascript" src="/library/Zepto/zepto.js"></script>
     <script type="text/javascript" src="/dist/js/pages/index/init.js"></script>
     <style type="text/css">
-        .prot1{width: 100%;height: 390px;background: #86e4b2;box-sizing: border-box}
-        .prot1 >.leftinfo{width: 0.8rem;height: 168px;;border: 1px solid red;float: left;margin-top:111px }
-        .prot1 >.leftinfo dt{font-size: 24px;color: #fff}
-        .prot1 >.leftinfo dd{font-size: 16.5px;color: #666}
-        .prot1 >.rightinfo{width:1.2rem;margin-top: 80px;border: 1px solid green;float: right }
-        .prot2 >.title{width: 100%;height: 140px;line-height: 140px;text-align: center;font-size: 21px;color: #3a3a3a}
+        .prot1{width: 100%;height: 1.21875rem;background: #86e4b2;box-sizing: border-box;}
+        .prot1 >.leftinfo{width: 1.2rem;height: 0.525rem;float: left;margin-top:0.346875rem;padding-left: 10px }
+        .prot1 >.leftinfo dt{font-size: 0.1rem;color: #fff;margin-bottom: 0.05rem}
+        .prot1 >.leftinfo dd{font-size: 0.06875rem;color: #666;}
+        .prot1 >.leftinfo .circle{margin-right:5px;vertical-align: middle;width: 0.046875rem;height: 0.046875rem }
+        .prot1 >.rightinfo{width:0.8rem;margin-top: 0.22rem;height:1rem ;float: right;overflow: hidden}
+        .prot1 >.rightinfo>.img1{width: 100%;height: 100%}
+        .prot2{text-align: center;background: #fff}
+        .prot2 >.title{width: 100%;height: 0.4375rem;line-height: 0.4375rem;text-align: center;font-size: 0.065625rem;color: #3a3a3a;border: 1px solid transparent}
+        .prot2 img{width:1.918rem ;height: 0.63125rem;}
+        .prot2 img.mt40{margin-top: 0.125rem}
+        .prot2>.info1{width: 100%;}
+        .prot2>.info h2{text-align: left;color: #639b46;font-size:0.075rem;margin:0.09375rem auto 0.078125rem 0.09375rem }
+        .prot2>.info p{color: #61655f;font-size: 0.05rem;text-indent:2em;text-align: left;padding-left: 0.1rem;padding-right: 0.1rem;margin-top: 0.05rem;line-height: 0.1rem }
+        .prot2>.info p dl{text-align: left}
+        .prot3{width: 100%;/*height: 2.28125rem*/;background: #c6ede8;margin-top: 0.1875rem;}
+        .prot3>.title{text-align: center;}
+        .prot3 > .title .txt1{color: #414141;font-size: 0.09375rem;margin-top:0.2rem;display: inline-block}
+        .prot3 > .title .txt2{color: #fff;font-size: 0.05rem;margin-top:0.07rem;display: inline-block }
+        .prot3 >.prot_adv{box-sizing: border-box;margin-top: 0.140625rem}
+        .prot3 >.prot_adv>li{float: left;width: 50%;box-sizing: border-box; height: 0.8375rem;text-align: center;padding: 0.05rem 0.05rem;font-size:0.04375rem;margin-bottom:0.4rem }
+        .prot3 >.prot_adv>li>div{font-size:0.04375rem ;color: #707070;margin-top: 0.08rem;}
+        .prot4{background: #fff;width: 100%;/*height:2.134375rem*/;padding-left: 0.09375rem;padding-right: 0.09375rem }
+        .prot4 >.title{text-align: center}
+        .prot4 >.title .txt1{font-size:0.09375rem;color: #414141;margin-top:0.1875rem;display: inline-block }
+        .prot4 >.title .txt2{font-size:0.05rem;color: #bebfbe;margin-top: 0.04rem;display: inline-block}
+        .prot4 >.info .step{width: 0.175rem;height: 0.275rem;float: left;margin-right: 0.08rem}
+        .prot4 >.info h2{color:#606060;font-size: 0.06875rem; margin-bottom: 0.03rem}
+        .prot4 >.info p{color: #adadad;font-size: 0.05625rem;margin-left: 0.25rem}
+        .prot4 >.info{margin-bottom:0.15625rem;padding-left: 0.05rem;}
+        .prot4 >.info1{margin-top:0.2rem }
+        .prot5{height: 1.98rem;width: 100%;background: #afd8ee}
+        .prot5 >.title{text-align: center}
+        .prot5 >.title .txt1{font-size:0.09375rem;color:#414141;margin-top:0.28125rem;display: inline-block}
+        .prot5 >.title .txt2{font-size: 0.05rem;color: #fff;margin-top:0.0625rem;display: inline-block }
+        .prot5 >.list{margin-top: 0.1rem;/*padding-left:0.078125rem;padding-right: 0.078125rem*/;box-sizing: border-box }
+        .prot5 >.list>.info{height:1.26rem ;background: #fff;text-align: center;border-radius: 5px;box-sizing: border-box;width: 30%;float: left;margin-right: 2%;padding-left: 0.01rem;padding-right: 0.01rem}
+        .prot5 >.list>.MarR{margin-left: 2%}
+        .prot5 >.list>.info>h2{font-size: 0.08125rem;color: #444;margin-top:0.08125rem;margin-bottom: 0.03125rem }
+        .prot5 >.list>.info>img{width: 0.21rem;height: 0.2rem;margin-top:0.125rem }
+        .prot5 >.list>.info>p{font-size: 0.05rem;color: #a3a3a3;}
+        .prot6{background: #fff;width: 100%;height: auto;text-align: center}
+        .prot6 >.title{text-align: center}
+        .prot6 >.title .txt1{font-size:0.09375rem;color: #414141;margin-top:0.1875rem;display: inline-block }
+        .prot6 >.title .txt2{font-size:0.05rem;color: #bebfbe;margin-top: 0.04rem;display: inline-block}
+        .prot6>.scshow{width:1.63125rem;height: 1rem;margin-top: 0.1875rem }
+        .prot6>.msg1{width: 1.521875rem;height: 0.31875rem;margin-top: 0.31875rem;margin-left: -0.16rem}
+        .prot6>.msg2{width: 1.678125rem;height: 0.38125rem;margin-top: 0.10625rem;/*margin-left: 0.0625rem*/;margin-bottom: 0.3rem}
+        .bg-f5f6fa{background: #f5f6fa}
     </style>
 </head>
 <body>
@@ -33,13 +76,13 @@
         <div class="leftinfo">
             <dl>
                 <dt>最懂企业的电商服务系统</dt>
-                <dd>注册开通零成本</dd>
-                <dd>全方位运维保障</dd>
-                <dd>1对1售后服务</dd>
+                <dd><img class="circle" src="/dist/img/index/product12.png"/>注册开通零成本</dd>
+                <dd><img class="circle" src="/dist/img/index/product12.png"/>全方位运维保障</dd>
+                <dd><img class="circle" src="/dist/img/index/product12.png"/>1对1售后服务</dd>
             </dl>
         </div>
         <div class="rightinfo">
-            <img class="" src="/dist/img/index/product1.png" />
+            <img class="img1" src="/dist/img/index/product1.png" />
         </div>
     </div>
     <div class="prot2">
@@ -47,66 +90,135 @@
             <span>易企卖帮您搭建网上销售王国</span>
         </div>
         <img class="" src="/dist/img/index/product2.png" />
-        <div class="info1">
+        <div class="info info1">
             <h2>我们擅长的是您需要的</h2>
-            <p> 如果您拥有自己的企业，您可以创建品牌商城，我们擅长帮您塑造品牌形象、 提升品牌影响力，为您的企业提高品牌价值，在</p>
+            <p> 如果您拥有自己的企业，您可以创建品牌商城，我们擅长帮您塑造品牌形象、提升品牌影响力，为您的企业提高品牌价值，在您的电商路上我们祝您一臂之力！</p>
             <p>如果您热爱生活，您可以做社区商城，服务您的社区、精细化经营您的客户， 帮客户提高生活质量，为您的客户提供更方便、快捷的商品和服务，在您的社区商路上我们帮您服务大家!
             </p>
         </div>
-        <img  class="" src="/dist/img/index/product3.png" />
-        <div class="info2">
+        <img  class="mt40" src="/dist/img/index/product3.png" />
+        <div class="info info2">
             <h2>为您节约时间是我们的一贯坚持</h2>
-            <p>
-                <dl>
-                    <dt>开放自主:</dt>
-                    <dd>追求卓越，是我们的最高理念 </dd>
-                    <dd>全程自动化开通，注册建站同步完成，自助建店、自主开店，为您的电 商经营提供事半功倍的便利。</dd>
-                </dl>
-            </p>
-            <p>
-                <dl>
-                    <dt>包容共享:</dt>
-                    <dd>海纳百川，是我们的奋斗目标  </dd>
-                    <dd>各种应用海量供应，自主选择装修模板，随时添加最新个性化功能，为 您的业务崛起添砖加瓦。</dd>
-                </dl>
-            </p>
-            <p>
-            <dl>
-                <dt>共赢未来:</dt>
-                <dd>成就客户，是我们的核心宗旨  </dd>
-                <dd>7*24小时客服服务，一对一技术支持，帮助您的品牌获得持久的生命 力和强大的影响力，与您共同成长，共赴未来。</dd>
-            </dl>
-            </p>
+            <p><span>开放自主 : </span>追求卓越，是我们的最高理念
+                  全程自动化开通，注册建站同步完成,自助建店、自主开店,为您的电商经营提供事半功倍的便利。</p>
+            <p><span>包容共享 : </span>
+                    海纳百川，是我们的奋斗目标
+                    各种应用海量供应,自主选择装修模板,随时添加最新个性化功能,为您的业务崛起添砖加瓦。</p>
+            <p><span>共赢未来 : </span>
+                成就客户，是我们的核心宗旨7*24小时客服服务，一对一技术支持,帮助您的品牌获得持久的生命力和强大的影响力,与您共同成长,共赴未来。 </p>
         </div>
-        <img src="/dist/img/index/product4.png" />
-        <div class="info3">
+        <img class="mt40" src="/dist/img/index/product4.png" />
+        <div class="info info3">
             <h2>得心应手的独立商城</h2>
-            <p>
-                <dl>
-                    <dt>开放</dt>
-                    <dd>-- 开放的程序设计，为第三方合作伙伴提供安全可靠的程序接口</dd>
-                </dl>
-            </p>
-            <p>
-                <dl>
-                    <dt>易用</dt>
-                    <dd> -- 一目了然的管理功能，简单快捷的操作设置，无需专业知识即能轻松使用  </dd>
-                </dl>
-            </p>
-            <p>
-                <dl>
-                    <dt>安全</dt>
-                    <dd>-- 完善的数据备份机制和超强的防火墙设置，充分保障数据安全，防止关键数据丢失</dd>
-                </dl>
-            </p>
+            <p><span>开放</span>-- 开放的程序设计，为第三方合作伙伴提供安全可靠的程序接口</p>
+            <p><span>易用</span>-- 一目了然的管理功能，简单快捷的操作设置，无需专业知识即能轻松使用</p>
+            <p><span>安全</span>-- 完善的数据备份机制和超强的防火墙设置，充分保障数据安全，防止关键数据丢失</p>
         </div>
     </div>
-    <div class="prot3"></div>
-    <div class="prot4"></div>
-    <div class="prot5"></div>
-    <div class="prot6"></div>
+    <div class="prot3">
+        <div class="title">
+            <span class="txt1">多维度商品管理，提高购买率</span></br>
+            <span class="txt2">商品标签任意贴，让您的客户互动起来</span>
+        </div>
+        <ul class="prot_adv clear">
+            <li>
+                <img src="/dist/img/index/product5.png"/>
+                <div>多样化商品管理，支持类型管理、分类管理、品牌管理，满足您丰富多样化的业务需要，让您的客户轻轻松松搜索到自己心仪的商品</div>
+            </li>
+            <li>
+                <img src="/dist/img/index/product6.png"/>
+                <div>人性化的客户体验，支持评论晒单、商品咨询、商品关注、商品排序等自主功能，让客户在您的商城中体验到VIP的待遇</div>
+            </li>
+            <li>
+                <img src="/dist/img/index/product7.png"/>
+                <div>支持关联商品的添加，以便促进更多的商品销售</div>
+            </li>
+            <li>
+                <img src="/dist/img/index/product8.png" />
+                <div>
+                    支持批量管理商品的库存、价格、上下架、分类、排序。省去繁琐重复的操作步骤
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="prot4">
+        <div class="title">
+            <span class="txt1">海量会员特权，提高会员粘性</span></br>
+            <span class="txt2">会员图标任意换，会员资料任意加，我的会员任意购</span>
+        </div>
+        <div class="info info1">
+            <img class="step" src="/dist/img/index/product9.png"/>
+            <h2>个性化会员信息</h2>
+            <p>支持免登录购买、第三方登录、会员无限等级、会员资料自
+                定义等功能，满足您任意业务对会员的不同需求</p>
+        </div>
+        <div  class="info">
+            <img class="step" src="/dist/img/index/product10.png"/>
+            <h2>便捷的会员管理</h2>
+            <p>支持会员等级根据消费额自动升级、不同等级对应不同优惠、
+                任意更换会员图标、文字等，让您的店铺会员与众不同</p>
+        </div>
+        <div  class="info">
+            <img class="step" src="/dist/img/index/product11.png"/>
+            <h2>个性化会员信息</h2>
+            <p>支持在线咨询、邮件、短信、站内消息，可随时导出用户信
+                息，让您跟客户实现无障碍沟通</p>
+        </div>
+    </div>
+    <div class="prot5">
+        <div class="title">
+            <span class="txt1">多快好省处理订单</span></br>
+            <span class="txt2">交易信息加密，数据实时备份，经营安全不担忧</span>
+        </div>
+        <div class="list clear">
+            <div class="info MarR">
+                <img src="/dist/img/index/product13.png"/>
+                <h2>安全交易</h2>
+                <p>全程购物信息加密，云主机集群部署，稳定运行，100%安全放心</p>
+            </div>
+            <div class="info">
+                <img src="/dist/img/index/product14.png"/>
+                <h2>灵活管理</h2>
+                <p>根据配送地自动计算运费，自动加载商品实时信息，购物车商品自动完成数据共享，100%不丢单</p>
+            </div>
+            <div class="info">
+                <img src="/dist/img/index/product15.png"/>
+                <h2>无忧售后</h2>
+                <p>支持购买者或商家取消订单和发起退换货业务，实现申请、审批、执行全流程售后服务，100%全程服务</p>
+            </div>
+        </div>
+
+    </div>
+    <div class="prot6">
+        <div class="title">
+            <span class="txt1">灵活机动运作商城</span></br>
+            <span class="txt2">图片文字任意组合，统计分析专业便捷，内容管理轻松快捷</span>
+        </div>
+        <img class="scshow" src="/dist/img/index/product16.png"/>
+        <img class="msg1" src="/dist/img/index/product17.png"/>
+        <img class="msg2" src="/dist/img/index/product18.png"/>
+    </div>
+    <div class="floor4 bg-f5f6fa">
+        <p class="regCon">
+            <span class="txt1">如果您也想拥有，请点击</span>
+            <span class="regBtn">免费体验</span>
+        </p>
+    </div>
+    <div class="floor5">
+        <p class="bot1">
+            <span>版权所有</span>
+            <span>Copyright</span>
+            <span>1999-2016 300.cn All Rights Reserved</span>
+        </p>
+        <p class="bot2">
+            <span>电脑版请访问 www.shopce.cn</span>
+        </p>
+    </div>
+    <div class="floor6"></div>
 </section>
-<!--#include virtual="/public/footer.html"-->
+<div style="display: block">
+    <!--#include virtual="/public/footer.html"-->
+</div>
 <!--#include virtual="/public/sidebar.html"-->
 </body>
 <script type="text/javascript" src="/dist/js/public.js"></script>

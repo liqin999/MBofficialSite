@@ -27,7 +27,7 @@
 .floor4 .txt1{font-size:0.09375rem ;color: #646464;}
 .floor4 .regCon{text-align: center;margin-top: 0.1875rem}
 .floor4 .regBtn{display: inline-block;font-size: 0.0875rem;color: #fff;background:#7ab55c;width: 0.5625rem;height: 0.16875rem;line-height: 0.16875rem;text-align: center;margin-left: 0.0625rem;border-radius: 3px }
-.floor5{background-color: #3d464d;color: #d9d9d9;width: 100%;text-align: center;font-size: 0.0375rem;height: 0.4rem;overflow: hidden}
+.floor5{background-color: #3d464d;color: #d9d9d9;width: 100%;text-align: center;font-size: 0.05rem;height: 0.4rem;overflow: hidden}
 .floor5 .bot1{margin-top:0.08125rem }
 .floor6{height: 0.30625rem;width: 100%}
 
@@ -37,5 +37,13 @@
     .floor5 .bot1, .floor5 .bot2
     {
         margin-bottom:  0;
+    }
+}
+
+@media all and (min-width:340px)
+{
+     .floor5 .bot2
+    {
+        margin-top:0.05rem;
     }
 }
