@@ -10,7 +10,8 @@
     position: absolute;
 }
 #head .leftlogo{float: left;width: 0.34375rem;margin-left:0.10925rem;cursor: pointer;display: inline-block;margin-top:0.06rem }
-#head .rightBtn{float: right;width: 0.09375rem;margin-right: 0.09375rem;cursor: pointer;display: inline-block;margin-top: 0.0875rem}
+#head .navBtn{height: 100%;width:0.3rem;float: right}
+#head .rightBtn{float: right;width: 0.09375rem;margin-right: 0.09375rem;cursor: pointer;display: inline-block;margin-top: 0.0875rem;}
 
 /*尾部信息*/
 #foot{height: 0.30625rem;width: 100%;position: fixed;bottom: 0px;left: 0px;background-color: #252f37;color: #fff;font-size: 0.075rem;}

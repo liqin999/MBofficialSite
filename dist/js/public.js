@@ -3,6 +3,7 @@ document.getElementsByTagName("html")[0].style.fontSize=document.documentElement
 /*页面下部固定位置*/
 var back = document.getElementById("back");
 var rightBtn = document.getElementById("rightBtn");
+var navBtn = document.getElementById("navBtn");
 var head = document.getElementById("head");
 var foot = document.getElementById("foot");
 var main=document.getElementById("main");
@@ -10,7 +11,7 @@ var sideBar = document.getElementById("sideBar");
 var clienH=document.documentElement.clientHeight;
 var flagLogin=true;
 back.addEventListener("touchend",backtop,false);
-rightBtn.addEventListener("touchend",loginBtn,false);
+navBtn.addEventListener("touchend",loginBtn,false);
 function backtop(){
     var winHeight=document.documentElement.scrollTop||document.body.scrollTop;
     document.documentElement.scrollTop=document.body.scrollTop=0+"px"
@@ -45,6 +46,7 @@ function loginBtn(){
         stopSroll();
         main.addEventListener("touchend",function(){
             goback();
+            moveSroll();
         },false);
     }else{
         goback();
