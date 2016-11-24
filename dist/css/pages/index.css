@@ -58,7 +58,7 @@
 .prot1 >.rightinfo{width:0.8rem;margin-top: 0.22rem;height:1rem ;float: right;overflow: hidden}
 .prot1 >.rightinfo>.img1{width: 100%;height: 100%}
 .prot2{text-align: center;background: #fff}
-.prot2 >.title{width: 100%;height: 0.4375rem;line-height: 0.4375rem;text-align: center;font-size: 0.065625rem;color: #3a3a3a;border: 1px solid transparent}
+.prot2 >.title{width: 100%;height: 0.4375rem;line-height: 0.4375rem;text-align: center;font-size: 0.1rem;color: #3a3a3a;border: 1px solid transparent}
 .prot2 img{width:1.918rem ;height: 0.63125rem;}
 .prot2 img.mt40{margin-top: 0.125rem}
 .prot2>.info1{width: 100%;}
@@ -101,7 +101,7 @@
 .bg-f5f6fa{background: #f5f6fa}
 /*ourserver.html*/
 /*calc(100% - 0.6rem);*/
-.server2{background:#f7f7f7;width: 100%;box-sizing: border-box; padding:0.05rem 0.12rem 0.15rem ;}
+.server2{background:#f7f7f7;width: 100%;box-sizing: border-box; padding:0.15rem 0.12rem 0.15rem ;}
 .server2>.list{}
 .server2>.list>li{height: 0.45rem;margin-top: 0.05rem}
 .server2>.list>li .ser2img{float: left;width: 0.284375rem;height: 0.284375rem}
@@ -112,7 +112,7 @@
 .server2>.list>li:nth-last-of-type(1){margin-bottom: 10px}
 .server3{width: 100%;text-align: center}
 .server3>.succ{color: #3a3a3a;font-size: 0.075rem;margin-top: 0.28125rem;}
-.server3>img{width:1.6625rem;height: 0.46875rem;margin-top: 0.25rem;margin-bottom:0.09375rem;box-shadow: 4px 6px 6px #ddd; }
+.server3>img{width:1.6625rem;height: 0.46875rem;margin-top: 0.25rem;margin-bottom:0.15rem;box-shadow: 4px 6px 6px #ddd; }
 .server3 .title{color: #7ab55c;font-size: 0.06875rem}
-.server3 .info{margin-top:0.046875rem;color: #8c8b8b;font-size: 0.04375rem;line-height:0.1rem;padding: 0rem 0.2rem;text-indent: 2em }
+.server3 .info{margin-top:0.02rem;color: #8c8b8b;font-size: 0.04375rem;line-height:0.1rem;padding: 0rem 0.2rem;text-indent: 2em }
 .mb125{margin-bottom: 0.3rem}
