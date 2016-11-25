@@ -17,33 +17,69 @@
     <title>易企卖</title>
     <script type="text/javascript" src="/library/Zepto/zepto.js"></script>
     <script type="text/javascript" src="/dist/js/pages/index/init.js"></script>
+    <style type="text/css">
+        #login{width: 100%;background:#3c4650;overflow: hidden;height: 100% }
+        #login .loginLogo{width: 100%;text-align: center; margin-top:66px;}
+        #login .logoImg{width:105px;height: 50px;}
+        #login .txt1{color:#fff;font-size: 16px; }
+        #login .info{padding: 0 78px 20px 78px;text-align: center}
+        #login .info>label{width:60px;height: 46px;text-align: left;color: #fff;font-size: 16px}
+        #login .info .txt1{width:428px;height: 46px;line-height: 46px;color: #fff;padding-left:18px;border: 1px solid #ddd  }
+        #login .info .txt2{width:226px;height: 46px;line-height: 46px;color: #fff;padding-left:18px;border: 1px solid #ddd;}
+        #login .info .login_yzm{width: 200px;
+            height: 44px;
+            border: 1px solid #ddd;
+            border-left: none;
+            background: #ffffff;
+            display: inline-block;
+        }
+        #login .info .login_yzm em{display: inline-block;margin: 5px}
+        #login .info .login_yzm a{text-decoration: underline; color: #4587db; margin-left: 20px;}
+        #login .forgetTip{color: #eff0f1;font-size: 12px}
+        #login .info1{text-align: right;padding-right: 150px}
+        #login .info2{text-align: center}
+        #login .info .loginBtn{display: inline-block;text-align: center;height: 47px;line-height: 47px;color:#fff;font-size: 20px;background: #7ab55c;width: 484px}
+        #login .user_login_p{font-size: 14px;color: #c8c8c8;text-align: center}
+        #login .user_login_p .user_login{color: #7ab55c}
+    </style>
 </head>
 <body>
     <div id="login">
-        <div><img src="/dist/img/index/index2.png"/></div>
-        <p>
-            <span>账号</span><input type="text" placeholder="手机号码"/>
-        </p>
-        <p>
-            <span>密码</span><input type="text" placeholder="登录密码"/>
-        </p>
-        <p>
-            <span>验证码</span><input type="text" placeholder="验证码"/>
-            <span class="login_yzm">
-                <em class="login_img"><img src="" id="verify"/>
+        <div class="loginLogo">
+            <img class="logoImg" src="/dist/img/index/index2.png"/>
+        </div>
+        <div class="info">
+            <label>账号</label><input id="cc" class="txt1" value="cc" type="number" placeholder="手机号码"/>
+        </div>
+        <div class="info">
+            <label>密码</label><input class="txt1" type="text" placeholder="登录密码"/>
+        </div>
+        <div class="info clear">
+            <label>验证码</label><input class="txt2" type="text" placeholder="验证码"/>
+            <div class="login_yzm">
+                <em class="login_img">
+                    <img src="/dist/img/index/verify.png" class="verify" id="verify"/>
                 </em>
-                <a class="login_com" href="#">再来一张&gt;</a>
-            </span>
-        </p>
-        <div>
-            <span>忘记密码？</span>
+                <a class="login_com" href="#">再来一张 > </a>
+            </div>
         </div>
-        <div>
-            <span>登录</span>
+        <div class="info info1">
+            <span class="forgetTip">忘记密码？</span>
         </div>
-        <p class="user_login_p">没有账号？<a class="user_login" href="javascript:;">立即注册</a></p>
+        <div class="info info2">
+            <span class="loginBtn">登录</span>
+        </div>
+        <div class="user_login_p">没有账号？<a class="user_login" href="javascript:;">立即注册</a></div>
     </div>
 </body>
 <!--<script type="text/javascript" src="/dist/js/public.js"></script>-->
 <script type="text/javascript" src="/dist/js/pages/index/loginOn.js"></script>
+<script type="text/javascript">
+    //调取输入框
+
+    function cc(){
+        document.getElementById("cc").focus();
+    }
+
+</script>
 </html>
