@@ -1,13 +1,13 @@
 /*获得当前屏幕的大小，并计算rem值，项目中实际的大小是设计稿除以320*/
 document.getElementsByTagName("html")[0].style.fontSize=document.documentElement.clientWidth/2+"px";
 /*页面下部固定位置*/
-var back = document.getElementById("back");
-var rightBtn = document.getElementById("rightBtn");
-var navBtn = document.getElementById("navBtn");
-var head = document.getElementById("head");
-var foot = document.getElementById("foot");
-var main=document.getElementById("main");
-var sideBar = document.getElementById("sideBar");
+var back = document.querySelector("#back");
+var rightBtn = document.querySelector("#rightBtn");
+var navBtn = document.querySelector("#navBtn");
+var head = document.querySelector("#head");
+var foot = document.querySelector("#foot");
+var main=document.querySelector("#main");
+var sideBar = document.querySelector("#sideBar");
 var clienH=document.documentElement.clientHeight;
 var flagLogin=true;
 back.addEventListener("touchend",backtop,false);

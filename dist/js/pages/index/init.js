@@ -26,17 +26,3 @@ var getCookie = function getCookie(name){
         return null;
     }
 };
-(function(){
-    var requestUrl = ucenterUrl+'/index.php/Ucenter/Login/isloginCheck';
-    $.ajax(requestUrl, {
-        dataType: 'jsonp',
-        crossDomain: true,
-        success: function(data) {
-            if(data.code == "0"){
-            }else if(data.code == "1"){
-             $(".y_con.head").find(".user").html("用户中心");
-            }
-        }
-    });
-
-})();
