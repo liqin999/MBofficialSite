@@ -4,6 +4,7 @@
     <file url="file://$PROJECT_DIR$/dist/css/common/head.css" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dist/css/common/public.css" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dist/css/pages/index.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dist/css/pages/loginOn.css" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dist/js/pages/index/loginOn.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dist/js/public.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/library/Zepto/zepto.js" charset="UTF-8" />

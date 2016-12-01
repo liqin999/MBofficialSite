@@ -1,0 +1,33 @@
+#login{width: 100%;background:#3c4650;overflow: hidden;height: 100%;}
+#login .loginLogo{width: 100%;text-align: center; margin-top:0.3rem;}
+#login .logoImg{width:0.328125rem;height: 0.15625rem;}
+#login .info{padding:0rem 0.24375rem 0.0625rem 0.24375rem;text-align: center}
+#login .info>label{width:0.25rem;height: 0.14375rem;text-align: left;color: #fff;font-size: 0.05rem}
+#login .info .txt1{width:1.175rem;height: 0.14375rem;line-height: 0.14375rem;background: #fff;padding-left:0.05625rem;border: 1px solid #ddd; font-size: 0.05rem;border-radius: 2px  }
+#login .info .txt2{width:0.52rem;height: 0.14375rem;line-height: 0.14375rem;background: #fff;padding-left:0.05625rem;border: 1px solid #ddd;font-size: 0.05rem;
+    border-bottom-left-radius: 2px
+;border-top-left-radius: 2px;
+   }
+#login .info .login_yzm{width: 0.65rem;
+    height: 0.14375rem;
+    line-height: 0.14375rem;
+    border: 1px solid #ddd;
+    border-left: none;
+    background: #ffffff;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: -0.01rem;
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+}
+#login .info .login_yzm em{display: inline-block;margin: 0rem}
+#login .info .login_yzm .login_com{font-size: 0.0375rem;text-decoration: underline; color: #4587db;}
+#login .info .login_yzm .verify{width:0.24rem;height: 0.11rem }
+
+#login .forgetTip{color: #eff0f1;font-size: 0.0375rem}
+#login .info1{text-align: right;padding-right: 0.3rem;margin-top: -0.06rem;}
+#login .info2{text-align: center}
+#login .info .loginBtn{display: inline-block;text-align: center;height: 0.146875rem;line-height: 0.146875rem;color:#fff;font-size: 0.0625rem;background: #7ab55c;width: 1.425rem;border-radius: 2px}
+#login .user_login_p{font-size: 0.04375rem;color: #c8c8c8;text-align: center;margin-top: 0.05rem}
+#login .user_login_p .user_login{color: #7ab55c}
+#login .info:nth-of-type(2){margin-top: 0.15rem}
