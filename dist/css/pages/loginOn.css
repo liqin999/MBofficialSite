@@ -4,17 +4,16 @@
 #login .info{padding:0rem 0.24375rem 0.0625rem 0.24375rem;text-align: center}
 #login .info>label{width:0.25rem;height: 0.14375rem;text-align: left;color: #fff;font-size: 0.05rem}
 #login .info .txt1{width:1.175rem;height: 0.14375rem;line-height: 0.14375rem;background: #fff;padding-left:0.05625rem;border: 1px solid #ddd; font-size: 0.05rem;border-radius: 2px  }
-#login .info .txt2{width:0.52rem;height: 0.14375rem;line-height: 0.14375rem;background: #fff;padding-left:0.05625rem;border: 1px solid #ddd;font-size: 0.05rem;
+#login .info .txt2{width:0.53rem;height: 0.14375rem;line-height: 0.14375rem;background: #fff;padding-left:0.05625rem;border: 1px solid #ddd;font-size: 0.05rem;
     border-bottom-left-radius: 2px
 ;border-top-left-radius: 2px;
    }
-#login .info .login_yzm{width: 0.65rem;
+#login .info .login_yzm{width: 0.66rem;
     height: 0.14375rem;
     line-height: 0.14375rem;
     border: 1px solid #ddd;
     border-left: none;
     background: #ffffff;
-    display: inline-block;
     vertical-align: top;
     margin-left: -0.01rem;
     border-bottom-right-radius: 2px;
@@ -31,3 +30,6 @@
 #login .user_login_p{font-size: 0.04375rem;color: #c8c8c8;text-align: center;margin-top: 0.05rem}
 #login .user_login_p .user_login{color: #7ab55c}
 #login .info:nth-of-type(2){margin-top: 0.15rem}
+#flex_code{display: -webkit-box;float: right;margin-right: 0.04rem}
+#flex_code>input,#flex_code>div{-webkit-box-flex:2}
+#login .info>label.flex_txt{height: 0.1rem;    margin-top: 0.04rem;}
